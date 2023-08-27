@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section>
+      <nav>
+        <div class="leftNav">
+          <ul>
+            <li>
+              <img src="images/Asset 2.png" alt="" />
+            </li>
+            <li><a href="/" id="active" class="itemCollapse">Home</a></li>
+            <li><a href="/myProject" class="itemCollapse">My Project</a></li>
+            <li><a href="/myTestimonials" class="itemCollapse">My Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="rightNav">
+          <a href="/contact" class="itemCollapse">Contact Me</a>
+          <button onclick="openDropMenu()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
+      <div class="dropMenu-container" id="dropMenu-container">
+        <div><a href="/" id="aktif">Home</a></li></div>
+        <div><a href="/myProject">My Project</a></li></div>
+        <div><a href="/contact">Contact Me</a></div>
+        <div><a href="/myTestimonials">My Testimonials</a></div>
+      </div>
+      <!-- navbar ends -->
+
+      <span onclick="darkMode()">🌗</span>
+      <script>
+        function darkMode() {
+          document.querySelector("section").classList.toggle("darkMode");
+        }
+      </script>
+      <!-- darMode ends -->
+
+      <div class="mainContainer">
+        <div class="leftContainer">
+          <h2>Welcome To <span class="judul">My Hut</span></h2>
+          
+          <p><img src="images/Asset 2.png" alt="">
+            Nam ut vulputate ex. Sed sit amet iaculis mauris, non elementum ex. Ut euismod, turpis vel molestie ullamcorper, tellus dui sollicitudin velit, in laoreet orci sapien at ex. Donec tincidunt diam ac neque porttitor dignissim.
+            Donec suscipit fringilla sem, nec facilisis urna commodo ac. Vivamus viverra mattis mauris nec laoreet. Aliquam dictum massa sem, eget pretium mauris vehicula non. Etiam ac enim non lorem elementum dictum eu eget leo. suscipit
+            fringilla sem, nec facilisis urna commodo ac. Vivamus viverra mattis mauris nec laoreet. Aliquam dictum massa sem, eget pretium mauris vehicula non. Etiam ac enim non lorem elementum dictum eu eget leo.Nam ut vulputate ex.
+          </p>
+          <div class="hrefContainer">
+            <a href="https://wa.me/081218634019" class="contact">Contact</a>
+            <a href="images/no created.pdf" class="downloadCV">Download CV<i class="fa-solid fa-download"></i></a>
+          </div>
+          <div class="medsosContainer">
+            <a href="https://www.instagram.com/jerryhp__/" class="medsos"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jerry-hutari-putra-64b4a2217/" class="medsos"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://web.facebook.com/jerry.hutariputra" class="medsos"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.tiktok.com/@jerryhp__" class="medsos"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="rightContainer">
+          <div>
+            <img src="images/new.png" alt="Photo" />
+          </div>
+          <h3>Jerry Hutari Putra</h3>
+          <p>Fullstack Developer</p>
+        </div>
+      </div>
+    </section>
+
+     <!-- blog -->
+<h3 class="blogs-title">My Project</h3>
+    <div class="blogsContainer">
+      <div class="cardContainer">
+        <img src="https://images.unsplash.com/photo-1572666341285-c8cb9790ca50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="gambar" />
+        <h4>Garuda di dadaku</h4>
+        <h6>Duration: 5 hari</h6>
+        <p>
+          Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil
+          sebuah kumpulan teks.
+        </p>
+        <i class="fa-brands fa-react"></i>
+        <div class="buttonContainer">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <div class="cardContainer">
+        <img src="https://images.unsplash.com/photo-1572666341285-c8cb9790ca50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="gambar" />
+        <h4>Garuda di dadaku</h4>
+        <h6>Duration: 5 hari</h6>
+        <p>
+          Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil
+          sebuah kumpulan teks.
+        </p>
+        <i class="fa-brands fa-react"></i>
+        <div class="buttonContainer">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <div class="cardContainer">
+        <img src="https://images.unsplash.com/photo-1572666341285-c8cb9790ca50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="gambar" />
+        <h4>Garuda di dadaku</h4>
+        <h6>Duration: 5 hari</h6>
+        <p>
+          Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil
+          sebuah kumpulan teks.
+        </p>
+        <i class="fa-brands fa-react"></i>
+        <div class="buttonContainer">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <div class="cardContainer">
+        <img src="https://images.unsplash.com/photo-1572666341285-c8cb9790ca50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="gambar" />
+        <h4>Garuda di dadaku</h4>
+        <h6>Duration: 5 hari</h6>
+        <p>
+          Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil
+          sebuah kumpulan teks.
+        </p>
+        <i class="fa-brands fa-react"></i>
+        <div class="buttonContainer">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <div class="cardContainer">
+        <img src="https://images.unsplash.com/photo-1572666341285-c8cb9790ca50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="gambar" />
+        <h4>Garuda di dadaku</h4>
+        <h6>Duration: 5 hari</h6>
+        <p>
+          Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil
+          sebuah kumpulan teks.
+        </p>
+        <i class="fa-brands fa-react"></i>
+        <div class="buttonContainer">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/darkMode.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

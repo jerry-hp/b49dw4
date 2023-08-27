@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/blogDetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="leftNav">
+        <ul>
+          <li>
+            <img src="images/Asset 2.png" alt="" />
+          </li>
+          <li><a href="/" class="itemCollapse">Home</a></li>
+          <li><a href="/myProject" class="itemCollapse">My Project</a></li>
+          <li><a href="/myTestimonials" class="itemCollapse">My Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="rightNav">
+        <a href="/contact" class="itemCollapse">Contact Me</a>
+        <button onclick="openDropMenu()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+    <div class="dropMenu-container" id="dropMenu-container">
+      <div><a href="/" >Home</a></li></div>
+      <div><a href="/myProject">My Project</a></li></div>
+      <div><a href="/contact">Contact Me</a></div>
+      <div><a href="/myTestimonials">My Testimonials</a></div>
+    </div>
+    <!-- navbar ends -->
+    <section>
+      <span onclick="darkMode()">🌗</span>
+      <script>
+        function darkMode() {
+          document.querySelector("section").classList.toggle("darkMode");
+        }
+      </script>
+      <!-- darMode ends -->
+      <h2>JHP Web App</h2>
+      <div class="blogDetail-container">
+        <div class="twoSide">
+          <div class="leftSide">
+            <img
+              src="https://media.istockphoto.com/id/1448737609/id/foto/di-atas-sudut-bahu-seorang-gamer-wanita-muda-menang-dalam-video-game-di-komputer-pribadi-di.webp?b=1&s=170667a&w=0&k=20&c=NVdSeCdiQbuusu_B7LS_vIlYi0YFu4H8RSBIW01Z1Fg="
+              alt="gambar"
+            />
+          </div>
+          <div class="rightSide">
+            <div class="rightSatu">
+              <h4>Duration</h4>
+              <div>
+                <i class="fa-solid fa-calendar-days"></i>
+                <label>August 10, 2023 - august 17, 2023</label>
+              </div>
+              <div>
+                <i class="fa-solid fa-clock"></i>
+                <label>8 Days</label>
+              </div>
+            </div>
+
+            <h4>Technologies</h4>
+            <div class="rightDua">
+              <div class="technologiesLeft">
+                <div>
+                  <i class="fa-brands fa-react"></i>
+                  <label>React JS</label>
+                </div>
+                <div>
+                  <i class="fa-brands fa-node-js"></i>
+                  <label for="">Node JS</label>
+                </div>
+              </div>
+              <div class="technologiesRight">
+                <div>
+                  <i class="fa-brands fa-square-js"></i>
+                  <label for="">Javascript</label>
+                </div>
+                <div>
+                  <i class="fa-regular fa-compass"></i>
+                  <label for="">Socket IO</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          Tidak seperti anggapan banyak orang, Lorem Ipsum bukanlah teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih dari 2000 tahun.
+          Richard McClintock, seorang professor Bahasa Latin dari Hampden-Sidney College di Virginia, mencoba mencari makna salah satu kata latin yang dianggap paling tidak jelas, yakni consectetur, yang diambil dari salah satu bagian Lorem
+          Ipsum. Setelah ia mencari maknanya di di literatur klasik, ia mendapatkan sebuah sumber yang tidak bisa diragukan. Lorem Ipsum berasal dari bagian 1.10.32 dan 1.10.33 dari naskah "de Finibus Bonorum et Malorum" (Sisi Ekstrim dari
+          Kebaikan dan Kejahatan) karya Cicero, yang ditulis pada tahun 45 sebelum masehi. BUku ini adalah risalah dari teori etika yang sangat terkenal pada masa Renaissance. Baris pertama dari Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+          berasal dari sebuah baris di bagian 1.10.32.Integer quam orci, ultrices ac lectus id, efficitur condimentum libero. Phasellus sem odio, venenatis vel nulla nec, tempus dapibus tellus. Suspendisse laoreet rhoncus ultricies. Donec
+          mollis et risus eget commodo. In quis finibus libero. In elementum, quam et lacinia ultricies, turpis velit gravida purus, id facilisis massa nibh at neque. Nulla gravida leo massa, vitae varius nisl iaculis sit amet. Aenean
+          accumsan in massa eget cursus. Phasellus eget felis at sem condimentum pulvinar nec eu eros. Etiam laoreet in dui nec volutpat. Donec nulla ipsum, sagittis quis scelerisque in, ultrices et lorem. Integer convallis luctus nisl, id
+          lobortis enim sodales et. Sed ac dignissim metus.
+        </p>
+        <p>
+          Mauris quam metus, sodales sed ex at, vulputate convallis dolor. Phasellus sit amet ullamcorper arcu. Aenean dolor sem, porta in justo et, dictum facilisis nulla. Duis quis tincidunt mi. Maecenas ac egestas tellus, sed lacinia
+          turpis. Morbi vehicula libero luctus, vehicula ex sit amet, hendrerit leo. Sed elit ligula, laoreet consectetur lectus quis, molestie viverra ex. Curabitur risus ex, iaculis vitae rutrum sit amet, faucibus at tortor. Suspendisse
+          vehicula ornare lectus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque nec lectus et eleifend. Proin fringilla tincidunt lorem vel mollis. Maecenas feugiat nisl eget arcu molestie, quis maximus tellus fringilla. Aliquam at
+          tempus lacus, eu viverra tortor. Maecenas id quam augue. In justo odio, iaculis id ullamcorper quis, varius vitae sapien. Praesent fringilla eget metus sed facilisis. Donec pretium, risus ut varius tincidunt, augue mi vestibulum
+          ipsum, egestas euismod diam massa sed turpis. Suspendisse accumsan at urna sed tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eleifend purus elit, in auctor dolor malesuada in. Sed consequat
+          nunc quis eros sagittis fringilla. Phasellus lacus libero, fermentum eu condimentum eget, tincidunt vitae nisl. Ut sit amet lectus feugiat ex semper blandit. Quisque venenatis lacus ac enim rhoncus pulvinar.
+        </p>
+      </div>
+    </section>
+
+    <script src="js/darkMode.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

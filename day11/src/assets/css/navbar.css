@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0 auto;
+}
+nav {
+  max-width: 1518px;
+  display: flex;
+  flex-direction: row;
+  background-color: #dddddd;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 0 2px;
+  position: sticky;
+  top: 0;
+}
+.leftNav {
+  width: 50%;
+  display: flex;
+}
+.leftNav ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 6%;
+}
+.leftNav ul li {
+  display: flex;
+  list-style-type: none;
+}
+.leftNav ul li img {
+  display: flex;
+  width: 40px;
+}
+.leftNav ul li a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  border-width: 0 1px;
+}
+.leftNav ul li a:hover {
+  color: white;
+  background-color: #f78c0a;
+  padding: 4px 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0.2px #8d4e00;
+  transition: 0.2s ease-in-out;
+}
+#active {
+  font-weight: 600;
+  color: #f78c0a;
+}
+#active:hover {
+  color: white;
+  text-decoration: none;
+}
+.rightNav {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+.rightNav a {
+  margin-right: 6%;
+  text-decoration: none;
+  color: white;
+  background-color: #f78c0a;
+  padding: 4px 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0.2px #8d4e00;
+}
+.rightNav a:hover {
+  box-shadow: 0 0 5px black;
+  padding: 2px 20px;
+}
+.rightNav button {
+  display: none;
+}
+.dropMenu-container {
+  display: none;
+}
+.dropMenu-container a {
+  display: none;
+}
+
+/* darkMode-numpang */
+span {
+  font-size: 17px;
+  cursor: pointer;
+}
+.darkMode {
+  background-image: radial-gradient(circle, #7a7777, #626060, #4b4949, #353434, #212020);
+}
+section {
+  background-image: radial-gradient(circle, #f4b76e, #f5ad59, #f6a244, #f6982c, #f78c0a);
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+}
+/* darkMode-numpang ends */
+
+/* responsive */
+@media only screen and (max-width: 768px) {
+  .itemCollapse {
+    display: none;
+  }
+  .rightNav button {
+    display: flex;
+    margin-right: 6%;
+    background-color: #dddddd;
+    border: none;
+    cursor: pointer;
+  }
+  .rightNav button i {
+    font-size: 30px;
+  }
+  .dropMenu-container {
+    display: none;
+    box-shadow: 0 0 2px;
+    position: sticky;
+    top: 0;
+  }
+  .dropMenu-container div {
+    display: flex;
+    justify-content: center;
+    max-width: 768px;
+    background-color: #dddddd;
+    cursor: pointer;
+  }
+  .dropMenu-container div a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+  }
+  .dropMenu-container div:hover {
+    background-color: #f78c0a;
+  }
+  #aktif {
+    background-color: #f78c0a;
+    color: white;
+  }
+}
