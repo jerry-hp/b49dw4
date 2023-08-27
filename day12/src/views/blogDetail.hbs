@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/blogDetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="leftNav">
+        <ul>
+          <li>
+            <img src="/images/Asset 2.png" alt="" />
+          </li>
+          <li><a href="/" class="itemCollapse">Home</a></li>
+          <li><a href="/myProject" class="itemCollapse">My Project</a></li>
+          <li><a href="/myTestimonials" class="itemCollapse">My Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="rightNav">
+        <a href="/contact" class="itemCollapse">Contact Me</a>
+        <button onclick="openDropMenu()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+    <div class="dropMenu-container" id="dropMenu-container">
+      <div><a href="/" >Home</a></li></div>
+      <div><a href="/myProject">My Project</a></li></div>
+      <div><a href="/contact">Contact Me</a></div>
+      <div><a href="/myTestimonials">My Testimonials</a></div>
+    </div>
+    <!-- navbar ends -->
+    <section>
+      <span onclick="darkMode()">🌗</span>
+      <script>
+        function darkMode() {
+          document.querySelector("section").classList.toggle("darkMode");
+        }
+      </script>
+      <!-- darMode ends -->
+      <h2>{{data.title}}</h2>
+      <div class="blogDetail-container">
+        <div class="twoSide">
+          <div class="leftSi  de">
+            <img
+              src="{{data.image}}"
+              alt="gambar"
+            />
+          </div>
+          <div class="rightSide">
+            <div class="rightSatu">
+              <h4>Duration</h4>
+              <div>
+                <i class="fa-solid fa-calendar-days"></i>
+                <label>{{data.startdate}} / {{data.enddate}}</label>
+              </div>
+              <div>
+                <i class="fa-solid fa-clock"></i>
+                <label>{{data.Duration}}</label>
+              </div>
+            </div>
+
+            <h4>Technologies</h4>
+            <div class="rightDua">
+              <div class="technologiesLeft">
+                {{#if data.reactjs}}
+                <div>
+                  <i class="fa-brands fa-react"></i>
+                  <label>React JS</label>
+                </div>
+                {{/if}}
+                {{#if data.nodejs}}
+                <div>
+                  <i class="fa-brands fa-node-js"></i>
+                  <label for="">Node JS</label>
+                </div>
+                {{/if}}
+                 {{#if data.nextjs}}
+                <div>
+                  <i class="fa-brands fa-square-js"></i>
+                  <label for="">Javascript</label>
+                </div>
+                 {{/if}}
+                 {{#if data.typescript}}
+                <div>
+                  <i class="fa-regular fa-compass"></i>
+                  <label for="">Socket IO</label>
+                </div>
+                 {{/if}}
+              </div>
+              <div class="technologiesRight">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+         {{data.content}}
+        </p>
+      </div>
+    </section>
+
+    <script src="/js/darkMode.js"></script>
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>
