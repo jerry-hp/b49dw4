@@ -21,23 +21,29 @@ const projectData = [
     image: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
     title: "Ayo ngoding!",
     Duration: "8 days",
-    startdate: "August 26, 2023",
-    enddate: "September 03, 2023",
+    startdate: "2023-08-26",
+    enddate: "2023-09-03",
     content:
       "Coding adalah salah satu tindakan dari langkah-langkah pemrograman dengan menuliskan kode atau skrip dalam bahasa pemrograman. Supaya skrip tersebut dapat dipahami oleh komputer, maka saat proses coding kamu harus mengikuti aturan sintaks yang berlaku.Sempat disinggung sebelumnya, bahwa saat kamu menuliskan kode saat ngoding kamu harus memperhatikan aturan sintaks. Aturan sintaks ini sangat penting untuk kamu patuhi. Karena komputer merupakan mesin yang hanya mampu menerima kode atau perintah yang kamu masukkan. Apabila kamu tidak menuliskan kode sesuai dengan aturan sintaks dan ada kode yang salah kamu tulis, maka perintah yang kamu tulis tidak dapat dijalankan oleh komputer.",
     nodejs: "on",
     reactjs: "on",
+    nextjs: "",
+    typescript: "",
   },
   {
     // id: 2,
     image: "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
     title: "become a fullstack developer",
     Duration: "3 days",
-    startdate: "August 27, 2023",
-    enddate: "August 30, 2023",
+    startdate: "2023-08-27",
+    enddate: "2023-08-30",
     content:
       "A full-stack developer is a developer or engineer who can build both the front end and the back end of a website. The front end (the parts of a website a user sees and interacts with) and the back end (the behind-the-scenes data storage and processing) require different skill sets.The world of full-stack development is large, and many new and evolving technologies continually push the limits of what a full-stack developer can create. Staying on top of cutting-edge technology and techniques in the full-stack development field is one of the many exciting aspects of working in this role.",
-    nextjs: "on",
+    nextjs: "",
+    nodejs: "",
+    reactjs: "",
+    nextjs: "",
+    typescript: "on",
   },
 ];
 
@@ -89,17 +95,9 @@ function duration(startDate, endDate) {
   return durasi;
 }
 
-function isChecked(checkbox) {
-  return checkbox == "on" ? true : false;
-}
-
 function addProject(req, res) {
   var { title, startdate, enddate, content, nodejs, nextjs, reactjs, typescript } = req.body;
   const Duration = duration(startdate, enddate);
-  nodejs = isChecked(nodejs);
-  nextjs = isChecked(nextjs);
-  reactjs = isChecked(reactjs);
-  typescript = isChecked(typescript);
 
   const blog = {
     image: "https://images.unsplash.com/photo-1589652717406-1c69efaf1ff8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
@@ -114,7 +112,6 @@ function addProject(req, res) {
     typescript,
   };
 
-  projectData.unshift(blog);
   res.redirect("/");
 }
 function deleteBlog(req, res) {
@@ -133,10 +130,6 @@ function editProject(req, res) {
   const { id } = req.params;
   var { title, startdate, enddate, content, nodejs, nextjs, reactjs, typescript } = req.body;
   const Duration = duration(startdate, enddate);
-  nodejs = isChecked(nodejs);
-  nextjs = isChecked(nextjs);
-  reactjs = isChecked(reactjs);
-  typescript = isChecked(typescript);
 
   const editedData = {
     image: "https://images.unsplash.com/photo-1589652717406-1c69efaf1ff8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
@@ -150,6 +143,7 @@ function editProject(req, res) {
     reactjs,
     typescript,
   };
+ 
   projectData[id] = editedData;
   res.redirect("/");
 }

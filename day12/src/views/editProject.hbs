@@ -48,7 +48,7 @@
       <!-- darMode ends -->
 
       <form method="post" action="{{home.id}}">
-        <h3>Add My Project</h3>
+        <h3>Update My Project</h3>
         <label for="projectName-input">Project Name</label>
         <input type="text" name="title" id="projectName-input" value="{{home.title}}" />
 
@@ -69,52 +69,27 @@
         <label>Technologies</label>
         <div class="technologiesContainer">
           <div class="leftTechnologies">
-            {{#if home.nodejs}}
+
               <div>
-                <input name="nodejs" type="checkbox" id="nodeJs-input" />
+                <input name="nodejs" type="checkbox" id="nodeJs-input" {{#if home.nodejs}}checked{{/if}} />
                 <label for="nodeJs-input">Node Js</label>
               </div>
-            {{else}}
+            
               <div>
-                <input name="nodejs" type="checkbox" id="nodeJs-input" />
-                <label for="nodeJs-input">Node Js</label>
-              </div>
-            {{/if}}
-            {{#if home.reactjs}}
-              <div>
-                <input name="reactjs" type="checkbox" id="reactJs-input" />
+                <input name="reactjs" type="checkbox" id="reactJs-input" {{#if home.reactjs}}checked{{/if}}/>
                 <label for="reactJs-input">React Js</label>
               </div>
-            {{else}}
-              <div>
-                <input name="reactjs" type="checkbox" id="reactJs-input" />
-                <label for="reactJs-input">React Js</label>
-              </div>
-            {{/if}}
-          </div>
+            </div>
           <div class="rightTechnologies">
-            {{#if home.nextjs}}
               <div>
-                <input name="nextjs" type="checkbox" id="nextJs-input" />
+                <input name="nextjs" type="checkbox" id="nextJs-input" {{#if home.nextjs}}checked{{/if}} />
                 <label for="nextJs-input">next Js</label>
               </div>
-            {{else}}
               <div>
-                <input name="nextjs" type="checkbox" id="nextJs-input" />
-                <label for="nextJs-input">next Js</label>
-              </div>
-            {{/if}}
-            {{#if home.reactjs}}
-              <div>
-                <input name="typescript" type="checkbox" id="typescript-input" />
+                <input name="typescript" type="checkbox" id="typescript-input" {{#if home.typescript}}checked{{/if}} />
                 <label for="typescript-input">typescript</label>
               </div>
-            {{else}}
-              <div>
-                <input name="typescript" type="checkbox" id="typescript-input" />
-                <label for="typescript-input">typescript</label>
-              </div>
-            {{/if}}
+           
           </div>
         </div>
 

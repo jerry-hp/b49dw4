@@ -91,10 +91,10 @@
           {{this.content}}
         </p>
         <div class="technologi">
-         {{#if this.reactjs}}<i class="fa-brands fa-react"></i>{{/if}}
-         {{#if this.nodejs}}<i class="fa-brands fa-node-js"></i>{{/if}}
-         {{#if this.nextjs}}<i class="fa-brands fa-square-js"></i>{{/if}}
-         {{#if this.typescript}}<i class="fa-regular fa-compass"></i>{{/if}}
+         {{#if this.reactjs}}<i class="fa-brands fa-react"></i>{{else}}{{/if}}
+         {{#if this.nodejs}}<i class="fa-brands fa-node-js"></i>{{else}}{{/if}}
+         {{#if this.nextjs}}<i class="fa-brands fa-square-js"></i>{{else}}{{/if}}
+         {{#if this.typescript}}<i class="fa-regular fa-compass"></i>{{else}}{{/if}}
         </div>  
         <div class="buttonContainer">
           <a href="/edit-blog/{{@index}}">Edit</a>
