@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>My Testimonials</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/myTestimonials.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+        <nav>
+          <div class="leftNav">
+            <ul>
+              <li>
+                <img src="images/Asset 2.png" alt="" />
+              </li>
+              <li><a href="/" class="itemCollapse">Home</a></li>
+              <li><a href="/myProject" class="itemCollapse">My Project</a></li>
+              <li><a href="/myTestimonials" id="active" class="itemCollapse">My Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="rightNav">
+            <a href="/contact" class="itemCollapse">Contact Me</a>
+            <button onclick="openDropMenu()"><i class="fa-solid fa-bars"></i></button>
+          </div>
+        </nav>
+        <div class="dropMenu-container" id="dropMenu-container">
+          <div><a href="/" >Home</a></li></div>
+          <div><a href="/myProject">My Project</a></li></div>
+          <div><a href="/contact">Contact Me</a></div>
+          <div><a href="/myTestimonials" id="aktif">My Testimonials</a></div>
+        </div>
+         <!-- navbar ends -->
+
+         <span onclick="darkMode()">🌗</span>
+         <script>
+           function darkMode() {
+             document.body.classList.toggle("darkMode");
+           }
+         </script>
+      <!-- darMode ends -->
+      <h2>My Terstimonials</h2>
+      <h5>Rating By Star</h5>
+      <div class="starContainer">
+        <button onclick="allTestimonials()">All<i class="fa-solid fa-star"></i></button>
+        <button onclick="filter(1)">1<i class="fa-solid fa-star"></i></button>
+        <button onclick="filter(2)">2<i class="fa-solid fa-star"></i></button>
+        <button onclick="filter(3)">3<i class="fa-solid fa-star"></i></button>
+        <button onclick="filter(4)">4<i class="fa-solid fa-star"></i></button>
+        <button onclick="filter(5)">5<i class="fa-solid fa-star"></i></button>
+      </div>
+      <div class="testimonialsContainer" id="testimonials">
+           <!-- <div class="testimonial" >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw6QmRpuxYey5ITMHgUc7RJqsj6LBnqW-WjQ&usqp=CAU" alt="foto">
+              <i>"Mantap sekali bang messi!"</i>
+              <b>- Neymar Jr.</b>
+              <b>5<i class="fa-solid fa-star"></i></b>
+          </div>  -->
+    </div>
+
+
+
+    <script src="js/navbar.js"></script>
+    <script src="js/testimonials-AJAX.js"></script>
+  </body>
+</html>
