@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/myProject.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <nav>
+        <div class="leftNav">
+          <ul>
+            <li>
+              <img src="/images/Asset 2.png" alt="" />
+            </li>
+            <li><a href="/" class="itemCollapse">Home</a></li>
+            <li><a href="/myProject" id="active" class="itemCollapse">My Project</a></li>
+            <li><a href="/myTestimonials" class="itemCollapse">My Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="rightNav">
+          <a href="/contact" class="itemCollapse">Contact Me</a>
+          <button onclick="openDropMenu()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
+      <div class="dropMenu-container" id="dropMenu-container">
+        <div><a href="/">Home</a></div>
+        <div><a href="/myProject" id="aktif">My Project</a></div>
+        <div><a href="/contact">Contact Me</a></div>
+        <div><a href="/myTestimonials">My Testimonials</a></div>
+      </div>
+      <!-- navbar ends -->
+
+      <span onclick="darkMode()">🌗</span>
+      <script>
+        function darkMode() { document.querySelector("section").classList.toggle("darkMode"); }
+      </script>
+      <!-- darMode ends -->
+
+      <form method="post" action="{{home.id}}">
+        <h3>Update My Project</h3>
+        <label for="projectName-input">Project Name</label>
+        <input type="text" name="title" id="projectName-input" value="{{home.title}}" />
+
+        <div class="dateContainer">
+          <div class="startDate-container">
+            <label for="startDate-input">Start Date</label>
+            <input type="date" name="startdate" id="startDate-input" value="{{home.start_date}}" />
+          </div>
+          <div class="endDate-container">
+            <label for="endDate-input">End Date</label>
+            <input type="date" name="enddate" id="endDate-input" value="{{home.end_date}}" />
+          </div>
+        </div>
+
+        <label for="description-input">Description</label>
+        <textarea name="content" id="description-input" cols="30" rows="9">{{home.content}}"</textarea
+        <label>Technologies</label>
+        <div class="technologiesContainer">
+          <div class="leftTechnologies">
+
+              <div>
+                <input name="nodejs" type="checkbox" id="nodeJs-input" {{#if home.nodejs}}checked{{/if}} />
+                <label for="nodeJs-input">Node Js</label>
+              </div>
+            
+              <div>
+                <input name="reactjs" type="checkbox" id="reactJs-input" {{#if home.reactjs}}checked{{/if}}/>
+                <label for="reactJs-input">React Js</label>
+              </div>
+            </div>
+          <div class="rightTechnologies">
+              <div>
+                <input name="nextjs" type="checkbox" id="nextJs-input" {{#if home.nextjs}}checked{{/if}} />
+                <label for="nextJs-input">next Js</label>
+              </div>
+              <div>
+                <input name="typescript" type="checkbox" id="typescript-input" {{#if home.typescript}}checked{{/if}} />
+                <label for="typescript-input">typescript</label>
+              </div>
+           
+          </div>
+        </div>
+
+        <p>Upload Image</p>
+        <label class="imageInput-container" for="image-input">
+          <p>choose</p>
+          <input type="file" accept="Image" id="image-input" hidden /><i class="fa-solid fa-paperclip"></i>
+        </label>
+        <div class="btnContainer">
+          <button>Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="/js/blog.js"></script>
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>

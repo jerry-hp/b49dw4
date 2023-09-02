@@ -1,0 +1,114 @@
+section {
+  background-image: radial-gradient(circle, #f4b76e, #f5ad59, #f6a244, #f6982c, #f78c0a);
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+  height: 100vh;
+}
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+form h3 {
+  margin: 0 auto;
+}
+form input[type="text"],
+form input[type="date"] {
+  background-color: #dddddd;
+  border: none;
+  box-shadow: 0 0px 1px 0.4px black;
+  height: 25px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.dateContainer {
+  display: flex;
+}
+.startDate-container {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.endDate-container {
+  margin-left: auto;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+form textarea {
+  resize: none;
+  background-color: #dddddd;
+  box-shadow: 0 0px 1px 0.4px black;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.technologiesContainer {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 10px;
+}
+.leftTechnologies div input,
+.rightTechnologies div input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.leftTechnologies div label,
+.rightTechnologies div label {
+  cursor: pointer;
+}
+.imageInput-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #dddddd;
+  height: 25px;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-right: 2%;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 0.4px black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.imageInput-container p {
+  background-color: #f78c0a;
+  padding: 0.1px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 0.4px black;
+  color: white;
+}
+.imageInput-container p:hover {
+  color: black;
+  box-shadow: 0 0 4px black;
+}
+.btnContainer {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+.btnContainer button {
+  display: block;
+  padding: 3px 20px;
+  color: white;
+  background-color: #f78c0a;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0.2px #000000;
+  border: none;
+  cursor: pointer;
+}
+.btnContainer button:hover {
+  color: black;
+  box-shadow: 0 0 4px black;
+}
+
+/* responsive */
+@media only screen and (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+  .cardContainer {
+    width: 48%;
+  }
+}
