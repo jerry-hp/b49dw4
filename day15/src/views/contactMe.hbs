@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/contactMe.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="leftNav">
+        <ul>
+          <li>
+            <img src="images/Asset 2.png" alt="" />
+          </li>
+          <li><a href="/" class="itemCollapse">Home</a></li>
+          {{#if isLogin}}
+            <li><a href="/myProject" class="itemCollapse">Add Project</a></li>
+          {{/if}}
+        </ul>
+      </div>
+      <div class="rightNav">
+        {{#if isLogin}}
+          <a class="form" id="active" href="#">Hi, {{user}}</a>
+          <a class="form" href="/logout">Log out</a>
+        {{else}}
+          <a class="form" href="/register">Register</a>
+          <a class="form" href="/login">Login</a>
+        {{/if}}
+        <a href="/contact" class="itemCollapse">Contact Me</a>
+        <button onclick="openDropMenu()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+    <div class="dropMenu-container" id="dropMenu-container">
+      <div><a href="/">Home</a></div>
+      {{#if isLogin}}
+        <div><a href="/myProject">Add Project</a></div>
+      {{/if}}
+      <div><a href="/contact" id="aktif">Contact Me</a></div>
+    </div>
+    <!-- navbar ends -->
+    <span onclick="darkMode()">🌗</span>
+    <script>
+      function darkMode() { document.body.classList.toggle("darkMode"); }
+    </script>
+    <!-- darMode ends -->
+    <form action="">
+      <h2>More Closer To Me!</h2>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" class="name" placeholder=" Your Name..." />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" class="email" id="email" placeholder=" Your Email..." />
+      </div>
+      <div>
+        <label for="phone">Your Phone</label>
+        <input type="tel" class="phone" id="phone" placeholder=" Your phone..." />
+      </div>
+      <div>
+        <label for="subject">Subject</label>
+        <select id="subject" class="subject">
+          <option value="" hidden>Choose...</option>
+          <option>Frontend Developer</option>
+          <option>Backend Developer</option>
+          <option>Fullstack Developer</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" cols="30" rows="10" class="message" placeholder=" Your Message..."></textarea>
+      </div>
+      <div class="btnContainer">
+        <button type="button" onclick="sendMail()">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <script src="js/contactMe.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
