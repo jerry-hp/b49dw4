@@ -1,0 +1,19 @@
+CRUD data blog/projects with database:postgresql and sequelize:ORM
+
+AUTHENTICATION :proses pembuktian/validasi suatu data (contoh: proses register dan login)
+ENDCRYPTION:pengamanan yang mengubah informasi biasa menjadi kode yang menyembunyikan arti sebenarnya
+SESSION = Proses UNTUK MELACAK KEADAAN USER SAAT INTERAKSI DI WEBSITE DISIMPAN DI COOKIE DI SISI USER
+COOKIES = MENYIMPAN DATA PADA WEBSITE
+
+BCrypt: adalah algoritma enkripsi yang digunakan untuk menyimpan password yang aman dalam basis data.
+
+autorization:fungsi untuk menentukan hak akses atau hak istimewa kepada user
+
+Multer sendiri adalah sebuah middleware untuk melakukan file upload di Express. 
+Multer mengolah data yang dikirim melalui format multipart/form-data yang memang umum
+ digunakan ketika kita melakukan upload file dengan melalui request HTTP POST method.
+
+
+npm i bcrypt
+npm i express-session
+npm i express-flash
